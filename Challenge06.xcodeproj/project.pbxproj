@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		DA4A4E642F5A051F00669299 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD97A9822E0DB3DA00F3908C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD97A9892E0DB3DA00F3908C;
+			remoteInfo = Challenge06;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		CD97A98A2E0DB3DA00F3908C /* Challenge06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge06.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4A4E602F5A051F00669299 /* Challenge06Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Challenge06Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = Challenge06;
 			sourceTree = "<group>";
 		};
+		DA4A4E612F5A051F00669299 /* Challenge06Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Challenge06Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CD97A9872E0DB3DA00F3908C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA4A4E5D2F5A051F00669299 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				CD97A98C2E0DB3DA00F3908C /* Challenge06 */,
+				DA4A4E612F5A051F00669299 /* Challenge06Tests */,
 				CD97A98B2E0DB3DA00F3908C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				CD97A98A2E0DB3DA00F3908C /* Challenge06.app */,
+				DA4A4E602F5A051F00669299 /* Challenge06Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = CD97A98A2E0DB3DA00F3908C /* Challenge06.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DA4A4E5F2F5A051F00669299 /* Challenge06Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA4A4E662F5A051F00669299 /* Build configuration list for PBXNativeTarget "Challenge06Tests" */;
+			buildPhases = (
+				DA4A4E5C2F5A051F00669299 /* Sources */,
+				DA4A4E5D2F5A051F00669299 /* Frameworks */,
+				DA4A4E5E2F5A051F00669299 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA4A4E652F5A051F00669299 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DA4A4E612F5A051F00669299 /* Challenge06Tests */,
+			);
+			name = Challenge06Tests;
+			packageProductDependencies = (
+			);
+			productName = Challenge06Tests;
+			productReference = DA4A4E602F5A051F00669299 /* Challenge06Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -77,11 +125,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1630;
+				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					CD97A9892E0DB3DA00F3908C = {
 						CreatedOnToolsVersion = 16.3;
+					};
+					DA4A4E5F2F5A051F00669299 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = CD97A9892E0DB3DA00F3908C;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				CD97A9892E0DB3DA00F3908C /* Challenge06 */,
+				DA4A4E5F2F5A051F00669299 /* Challenge06Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CD97A9882E0DB3DA00F3908C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA4A4E5E2F5A051F00669299 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA4A4E5C2F5A051F00669299 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA4A4E652F5A051F00669299 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD97A9892E0DB3DA00F3908C /* Challenge06 */;
+			targetProxy = DA4A4E642F5A051F00669299 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CD97A9932E0DB3DA00F3908C /* Debug */ = {
@@ -304,6 +379,48 @@
 			};
 			name = Release;
 		};
+		DA4A4E672F5A051F00669299 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CaioMandarino.Challenge06Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge06.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Challenge06";
+			};
+			name = Debug;
+		};
+		DA4A4E682F5A051F00669299 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CaioMandarino.Challenge06Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge06.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Challenge06";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -321,6 +438,15 @@
 			buildConfigurations = (
 				CD97A9962E0DB3DA00F3908C /* Debug */,
 				CD97A9972E0DB3DA00F3908C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA4A4E662F5A051F00669299 /* Build configuration list for PBXNativeTarget "Challenge06Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA4A4E672F5A051F00669299 /* Debug */,
+				DA4A4E682F5A051F00669299 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

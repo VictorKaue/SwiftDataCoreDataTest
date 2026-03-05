@@ -27,21 +27,11 @@ class ApiViewModel: ObservableObject {
         networkService.fetchData { result in
             switch result {
             case .success(let parsed):
-                
                 DispatchQueue.main.async {
                     self.games = parsed
                     self.gameList = parsed.results
                     
                     self.swiftDataViewModel.fetchGames()
-                    
-                    for gameParsed in parsed.results {
-                        for game in self.gameList {
-                            if gameParsed.name == game.name {
-                                self.gameList.removeAll { $0.name == game.name }
-                                self.gameList.insert(game, at: 0)
-                            }
-                        }
-                    }
                     
                     self.gameList = self.gameList.filter { game in
                         !self.swiftDataViewModel.games.contains(where: { $0.name == game.name })
@@ -49,8 +39,8 @@ class ApiViewModel: ObservableObject {
                     }
                 }
                 
-                print("GameList: \(self.swiftDataViewModel.games)")
-                print("GameList: \(self.coreDataController.games)")
+//                print("GameList: \(self.swiftDataViewModel.games)")
+//                print("GameList: \(self.coreDataController.games)")
                 
             case .failure(let error):
                 print(error)
