@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Challenge06
+@testable import Challenge006
 
 @MainActor
 final class ApiViewModelTest: XCTestCase {
