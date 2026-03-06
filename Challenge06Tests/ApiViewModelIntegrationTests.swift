@@ -1,48 +1,67 @@
 //
-//  ApiViewModelTest.swift
+//  ApiViewModelIntegrationTests.swift
 //  Challenge06Tests
 //
-//  Created by Caio Mandarino on 05/03/26.
+//  Created by Késia Silva Viana on 06/03/26.
 //
 
 import XCTest
 @testable import Challenge06
 
 @MainActor
-final class ApiViewModelTest: XCTestCase {
-
-
+final class ApiViewModelIntegrationTests: XCTestCase {
+    
     override func setUpWithError() throws {
+        
     }
-
+    
     override func tearDownWithError() throws {
+        
     }
-
-    func test_ApiViewModel_Fetch_ShouldSaveInGameList() async throws {
-        //Given
+    
+    func test_Fetch_ShouldFilterGamesAlreadySaved() async throws {
+        
+        // GIVEN
         let networkService = NetworkService(session: makeSession())
-        let sut = ApiViewModel(swiftDataViewModel: .init(dataSource: .shared), coreDataController: .init(), networkService: networkService)
+        
+        let swiftDataVM = SwiftDataViewModel(dataSource: .shared)
+        let coreData = CoreDataController()
+        
+        let sut = ApiViewModel(
+            swiftDataViewModel: swiftDataVM,
+            coreDataController: coreData,
+            networkService: networkService
+        )
+        
+        let existingGame = ApiModel(
+            id: 3498,
+            name: "Grand Theft Auto V",
+            background_image: "image"
+        )
+        
+        swiftDataVM.addGame(existingGame)
         
         MockURLProtocol.requestHandler = { request in
+            
             let mockData = """
                 {
                     "results": [
                         {
-                            "id": 3499,
-                            "name": "Grand Theft Auto VI",
-                            "background_image": "https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg"
+                            "id": 3498,
+                            "name": "Grand Theft Auto V",
+                            "background_image": "image"
+                        },
+                        {
+                            "id": 3328,
+                            "name": "The Witcher 3",
+                            "background_image": "image"
                         }
                     ]
                 }
                 """.data(using: .utf8)
             
-            guard let url = request.url else {
-                XCTFail("URL should not be nil")
-                return (nil, nil, nil)
-            }
-            
             let response = HTTPURLResponse(
-                url: url,
+                url: request.url!,
                 statusCode: 200,
                 httpVersion: nil,
                 headerFields: nil
@@ -51,19 +70,17 @@ final class ApiViewModelTest: XCTestCase {
             return (mockData, response, nil)
         }
         
-        // When
+        // WHEN
         sut.fetch()
-
-        // Then
+        
         try await Task.sleep(for: .seconds(2))
         
-        XCTAssertFalse(sut.gameList.isEmpty)
-        XCTAssert(sut.gameList.count == 1)
-        
+        // THEN
+        XCTAssertEqual(sut.gameList.count, 1)
+        XCTAssertEqual(sut.gameList.first?.name, "The Witcher 3")
     }
 }
-
-extension ApiViewModelTest {
+extension ApiViewModelIntegrationTests {
     private class MockURLProtocol: URLProtocol {
         
         override class func canInit(with request: URLRequest) -> Bool {
@@ -116,3 +133,4 @@ extension ApiViewModelTest {
         return URLSession(configuration: config)
     }
 }
+
