@@ -60,6 +60,8 @@ final class ApiViewModelTest: XCTestCase {
         XCTAssert(sut.gameList.count == 1)
         
     }
+    
+    
 
 }
 
