@@ -6,11 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		1AA893BC2F5DF6DF001372F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD97A9822E0DB3DA00F3908C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD97A9892E0DB3DA00F3908C;
+			remoteInfo = Challenge06;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1AA893B62F5DF6DF001372F0 /* Challenge06UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Challenge06UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD97A98A2E0DB3DA00F3908C /* Challenge06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge06.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		1AA893B72F5DF6DF001372F0 /* Challenge06UITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Challenge06UITests;
+			sourceTree = "<group>";
+		};
 		CD97A98C2E0DB3DA00F3908C /* Challenge06 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Challenge06;
@@ -19,6 +35,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1AA893B32F5DF6DF001372F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD97A9872E0DB3DA00F3908C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				CD97A98C2E0DB3DA00F3908C /* Challenge06 */,
+				1AA893B72F5DF6DF001372F0 /* Challenge06UITests */,
 				CD97A98B2E0DB3DA00F3908C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				CD97A98A2E0DB3DA00F3908C /* Challenge06.app */,
+				1AA893B62F5DF6DF001372F0 /* Challenge06UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +73,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1AA893B52F5DF6DF001372F0 /* Challenge06UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AA893C02F5DF6DF001372F0 /* Build configuration list for PBXNativeTarget "Challenge06UITests" */;
+			buildPhases = (
+				1AA893B22F5DF6DF001372F0 /* Sources */,
+				1AA893B32F5DF6DF001372F0 /* Frameworks */,
+				1AA893B42F5DF6DF001372F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AA893BD2F5DF6DF001372F0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1AA893B72F5DF6DF001372F0 /* Challenge06UITests */,
+			);
+			name = Challenge06UITests;
+			packageProductDependencies = (
+			);
+			productName = Challenge06UITests;
+			productReference = 1AA893B62F5DF6DF001372F0 /* Challenge06UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CD97A9892E0DB3DA00F3908C /* Challenge06 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD97A9952E0DB3DA00F3908C /* Build configuration list for PBXNativeTarget "Challenge06" */;
@@ -77,9 +125,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1630;
+				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					1AA893B52F5DF6DF001372F0 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = CD97A9892E0DB3DA00F3908C;
+					};
 					CD97A9892E0DB3DA00F3908C = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -100,11 +152,19 @@
 			projectRoot = "";
 			targets = (
 				CD97A9892E0DB3DA00F3908C /* Challenge06 */,
+				1AA893B52F5DF6DF001372F0 /* Challenge06UITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1AA893B42F5DF6DF001372F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD97A9882E0DB3DA00F3908C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +175,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1AA893B22F5DF6DF001372F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CD97A9862E0DB3DA00F3908C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +191,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1AA893BD2F5DF6DF001372F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD97A9892E0DB3DA00F3908C /* Challenge06 */;
+			targetProxy = 1AA893BC2F5DF6DF001372F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1AA893BE2F5DF6DF001372F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8B7F7G3Y2U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.caue.novic.Challenge06UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Challenge06;
+			};
+			name = Debug;
+		};
+		1AA893BF2F5DF6DF001372F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8B7F7G3Y2U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.caue.novic.Challenge06UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Challenge06;
+			};
+			name = Release;
+		};
 		CD97A9932E0DB3DA00F3908C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -255,7 +372,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AXCFFBQL7W;
+				DEVELOPMENT_TEAM = 8B7F7G3Y2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -283,7 +400,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AXCFFBQL7W;
+				DEVELOPMENT_TEAM = 8B7F7G3Y2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -307,6 +424,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1AA893C02F5DF6DF001372F0 /* Build configuration list for PBXNativeTarget "Challenge06UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AA893BE2F5DF6DF001372F0 /* Debug */,
+				1AA893BF2F5DF6DF001372F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CD97A9852E0DB3DA00F3908C /* Build configuration list for PBXProject "Challenge06" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
